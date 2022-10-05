@@ -1,0 +1,1 @@
+# private_diary_java
