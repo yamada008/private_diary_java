@@ -1,4 +1,4 @@
-package blog;
+
 
 import java.io.IOException;
 
@@ -21,9 +21,5 @@ public class HomeServlet extends HttpServlet {
 		resp.setContentType("text/html;charset=UTF-8");
 
 		req.getRequestDispatcher("WEB-INF/jsp/home.jsp").forward(req, resp);
-	}
-	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		this.doGet(req, resp);
 	}
 }
