@@ -4,8 +4,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import user.SimpleDAO;
-
 public class BlogDAO extends SimpleDAO {
 	private static BlogDAO dao = new BlogDAO();
 

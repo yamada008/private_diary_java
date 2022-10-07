@@ -3,10 +3,7 @@ package blog;
 import java.io.Serializable;
 import java.sql.Date;
 
-import java.calendar.CalendarBean;
-import jp.ac.o_hara.site.calendar.Schedulable;
-
-public class BlogBean implements Serializable, Schedulable {
+public class BlogBean implements Serializable {
 	private String userId = null;
 	private Date date = null;
 	private String title = null;
@@ -29,18 +26,5 @@ public class BlogBean implements Serializable, Schedulable {
 	public void setArticle(String article) { this.article = article; }
 	public String getArticle() { return this.article; }
 	
-	@Override
-	public String preRenderSchedule() {
-		return "<table class='table table-bordered table-condensed'><tr><th>日時</th><th>ユーザー</th></tr>";
-	}
 
-	@Override
-	public String renderSchedule(CalendarBean bean) {
-		return "<tr><td>"+bean.getDate().toString()+"</td><td>"+bean.getUserID()+"</td></tr>";
-	}
-
-	@Override
-	public String postRenderSchedule() {
-		return "</table>";
-	}	
 }

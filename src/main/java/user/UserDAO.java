@@ -4,6 +4,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import blog.SimpleDAO;
+
+
+
 public class UserDAO extends SimpleDAO {
 	// Singletonパターン（GoFデザインパターン）
 	// 用途：一つのインスタンスを共有する、複数のインスタンス生成を認めない

@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import jp.ac.o_hara.site.ContentBean;
 
 /**
  * Servlet implementation class BlogServlet
@@ -22,9 +21,9 @@ public class BlogServlet extends HttpServlet {
 		req.setCharacterEncoding("UTF-8");
 		resp.setContentType("text/html;charset=UTF-8");
 		
-		ContentBean content = new ContentBean("/WEB-INF/jsp/Blog/content.jsp");
-		req.removeAttribute("content"); // 既存のcontentを消去
-		req.setAttribute("content", content);
+//		ContentBean content = new ContentBean("/WEB-INF/jsp/Blog/content.jsp");
+//		req.removeAttribute("content"); // 既存のcontentを消去
+//		req.setAttribute("content", content);
 
 		req.getRequestDispatcher("WEB-INF/jsp/home.jsp").forward(req, resp);
 	}
