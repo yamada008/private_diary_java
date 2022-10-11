@@ -31,7 +31,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="/private_diary_java/user?logout=true">Log Out</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/private_diary_java/WEB-INF/jsp/home.jsp">Private Diary</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/private_diary_java/WEB-INF/jsp/home.jspx">Private Diary</a></li>
                         
      
 		<c:choose>
