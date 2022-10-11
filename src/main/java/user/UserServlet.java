@@ -23,6 +23,8 @@ public class UserServlet extends HttpServlet {
 		
 		if (req.getParameter("register") != null) { // 新規登録画面へ遷移
 			req.getRequestDispatcher("WEB-INF/jsp/User/register.jsp").forward(req, resp);
+		} else if(req.getParameter("login") != null) {
+			req.getRequestDispatcher("WEB-INF/jsp/login.jsp").forward(req, resp);
 		} else {
 			req.getRequestDispatcher("WEB-INF/jsp/home.jsp").forward(req, resp);
 		}
@@ -48,7 +50,7 @@ public class UserServlet extends HttpServlet {
 			resp.sendRedirect(req.getHeader("Referer"));
 		} else if (req.getParameter("logout") != null) { // ログアウトの場合
 			user.logout();
-			// session.removeAttribute("user");
+			session.removeAttribute("user");
 			//req.getRequestDispatcher("WEB-INF/jsp/index.jsp").forward(req, resp);
 			resp.sendRedirect(req.getHeader("Referer"));
 		} else if (req.getParameter("register") != null) { // 新規登録画面からの遷移
