@@ -16,7 +16,7 @@
 		<form method="post" action="./user">
 		<c:choose>
 		<c:when test="${ user.isAuth() }">
-			<p>ようこそ、${ user.getUserId() }さん</p>
+			<p>ようこそ!、${ user.getUserId() }さん</p>
 			<a class="btn btn-default" href="/private_diary_java/">トップへ</a>
 			<%--<input type="submit" class="btn btn-default" name="logout" value="ログアウト" /> --%>
 		</c:when>
