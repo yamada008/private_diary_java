@@ -23,3 +23,4 @@ public class HomeServlet extends HttpServlet {
 		req.getRequestDispatcher("WEB-INF/jsp/home.jsp").forward(req, resp);
 	}
 }
+//

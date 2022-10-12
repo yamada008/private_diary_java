@@ -42,3 +42,4 @@ public class UserBean implements Serializable {
 		this.realName = null;
 	}
 }
+//

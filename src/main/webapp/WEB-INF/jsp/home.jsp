@@ -33,7 +33,7 @@
                     <ul class="navbar-nav ms-auto">
 		<c:choose>
 		<c:when test="${ user.isAuth() }">
-			<p>ようこそ、${ user.getUserId() }さん</p>
+			<p>ようこそ!、${ user.getUserId() }さん</p>
 			<li class="nav-item"><a class="nav-link" href="/private_diary_java/user?logout=true">Log Out</a></li>
 			<li class="nav-item"><a class="nav-link" href="#!">Private Diary</a></li>
 		</c:when>

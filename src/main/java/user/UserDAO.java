@@ -69,5 +69,5 @@ public class UserDAO extends SimpleDAO {
 //
 //		return result;
 //	}
-
+//
 }
