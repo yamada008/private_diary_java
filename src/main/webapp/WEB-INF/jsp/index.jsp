@@ -20,7 +20,6 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="css/mystyle.css">
-        
     </head>
     <body>
 <div id="wrapper">
@@ -31,68 +30,13 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-		<c:choose>
-		<c:when test="${ user.isAuth() }">
-			<p>ようこそ、${ user.getUserId() }さん</p>
-			<li class="nav-item"><a class="nav-link" href="/private_diary_java/user?logout=true">Log Out</a></li>
-			<li class="nav-item"><a class="nav-link" href="#!">Private Diary</a></li>
-		</c:when>
-		<c:otherwise>
-			<li class="nav-item"><a class="nav-link" href="/private_diary_java/user?login=true">Log In・Sign Up</a></li>
-			
-		</c:otherwise>
-		</c:choose>
+		
                         
                     </ul>
                 </div>
             </div>
         </nav>
-        <!-- Header-->
-        <header class="masthead text-center text-white">
-            <div class="masthead-content">
-                <div class="container px-5">
-                    <h1 class="masthead-heading mb-0">DIARY</h1>
-                    <h2 class="masthead-subheading mb-0">日記を保存できるサービス</h2>
-                    
-                </div>
-            </div>
-            <div class="bg-circle-1 bg-circle"></div>
-            <div class="bg-circle-2 bg-circle"></div>
-            <div class="bg-circle-3 bg-circle"></div>
-            <div class="bg-circle-4 bg-circle"></div>
-        </header>
-        <section>
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 order-lg-2">
-                <div class="p-5">
-                    <img class="img-fluid rounded-circle" src="assets/img/01.jpg" alt=""></div>
-            </div>
-            <div class="col-lg-6 order-lg-1">
-                <div class="p-5">
-                    <h2 class="display-4">Web Diary</h2>
-                    <p>Webで作成/編集/削除が出来る日記</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Content section 2-->
-<section>
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/02.jpg" alt=""></div>
-            </div>
-            <div class="col-lg-6">
-                <div class="p-5">
-                    <h2 class="display-4">Save Your Diary</h2>
-                    <p>あなたの日記をWebに保存</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        
  
         <!-- Footer-->
     <footer class="py-5 bg-black">

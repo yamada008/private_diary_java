@@ -20,24 +20,31 @@ public class UserServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
 		resp.setContentType("text/html;charset=UTF-8");
-		
+		HttpSession session = req.getSession();
+		UserBean user = (UserBean) session.getAttribute("user");
+
 		if (req.getParameter("register") != null) { // 新規登録画面へ遷移
 			req.getRequestDispatcher("WEB-INF/jsp/User/register.jsp").forward(req, resp);
-		} else if(req.getParameter("login") != null) {
+		} else if (req.getParameter("login") != null) {
 			req.getRequestDispatcher("WEB-INF/jsp/login.jsp").forward(req, resp);
+		} else if (req.getParameter("logout") != null) {
+			user.logout();
+			session.removeAttribute("user");
+			//req.getRequestDispatcher("WEB-INF/jsp/home.jsp").forward(req, resp);
+			resp.sendRedirect(req.getHeader("Referer"));
 		} else {
 			req.getRequestDispatcher("WEB-INF/jsp/home.jsp").forward(req, resp);
 		}
 	}
-	
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
 		resp.setContentType("text/html;charset=UTF-8");
-		
+
 		HttpSession session = req.getSession();
 		UserBean user = (UserBean) session.getAttribute("user");
-		
+
 		if (req.getParameter("login") != null) { // ログインの場合
 			if (!user.isAuth()) { // !!重要
 				String id = req.getParameter("userId").toString();
@@ -46,7 +53,7 @@ public class UserServlet extends HttpServlet {
 					session.setAttribute("user", user);
 				}
 			}
-			//req.getRequestDispatcher("WEB-INF/jsp/index.jsp").forward(req, resp);
+			// req.getRequestDispatcher("WEB-INF/jsp/index.jsp").forward(req, resp);
 			resp.sendRedirect(req.getHeader("Referer"));
 		} else if (req.getParameter("logout") != null) { // ログアウトの場合
 			user.logout();
@@ -58,6 +65,6 @@ public class UserServlet extends HttpServlet {
 		} else if (req.getParameter("confirm") != null) { // 確認画面から遷移
 			req.getRequestDispatcher("WEB-INF/jsp/home.jsp").forward(req, resp);
 		}
-		//req.getRequestDispatcher("WEB-INF/jsp/index.jsp").forward(req, resp);
+		// req.getRequestDispatcher("WEB-INF/jsp/index.jsp").forward(req, resp);
 	}
 }
