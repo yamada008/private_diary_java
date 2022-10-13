@@ -57,5 +57,6 @@
             
         </div>
     </div>
+    <jsp:include page="/WEB-INF/jsp/index.jsp"/>
 </div>
 </html>
