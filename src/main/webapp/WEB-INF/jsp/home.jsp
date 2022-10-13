@@ -35,7 +35,7 @@
 		<c:when test="${ user.isAuth() }">
 			<p>ようこそ!、${ user.getUserId() }さん</p>
 			<li class="nav-item"><a class="nav-link" href="/private_diary_java/user?logout=true">Log Out</a></li>
-			<li class="nav-item"><a class="nav-link" href="#!">Private Diary</a></li>
+			<li class="nav-item"><a class="nav-link" href="/private_diary_java/diary">Private Diary</a></li>
 		</c:when>
 		<c:otherwise>
 			<li class="nav-item"><a class="nav-link" href="/private_diary_java/user?login=true">Log In・Sign Up</a></li>
@@ -66,7 +66,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6 order-lg-2">
                 <div class="p-5">
-                    <img class="img-fluid rounded-circle" src="assets/img/01.jpg" alt=""></div>
+                    <img class="img-fluid rounded-circle" src="assets/img/02.jpg" alt=""></div>
             </div>
             <div class="col-lg-6 order-lg-1">
                 <div class="p-5">
