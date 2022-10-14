@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class DiaryServlet
  */
-@WebServlet("/Diary_list")
+@WebServlet("/diary")
 public class DiaryServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
