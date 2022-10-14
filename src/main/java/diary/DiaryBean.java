@@ -7,14 +7,14 @@ public class DiaryBean implements Serializable {
 	private String userId = null;
 	private Date date = null;
 	private String title = null;
-	private String Text = null;
+	private String content = null;
 	
 	public DiaryBean() {}
-	public DiaryBean(String userId, Date date, String title, String Text) {
+	public DiaryBean(String userId, Date date, String title, String content) {
 		this.setUserId(userId);
 		this.setDate(date);
 		this.setTitle(title);
-		this.setText(Text);
+		this.setContent(content);
 	}
 	
 	public void setUserId(String id) { this.userId = id; }
@@ -23,8 +23,8 @@ public class DiaryBean implements Serializable {
 	public Date getDate() { return this.date; }
 	public void setTitle(String title) { this.title = title; }
 	public String getTitle() { return this.title; }
-	public void setText(String Text) { this.Text = Text; }
-	public String getText() { return this.Text; }
+	public void setContent(String content) { this.content = content; }
+	public String getContent() { return this.content; }
 	
 
 }

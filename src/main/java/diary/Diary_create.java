@@ -4,15 +4,14 @@ import java.io.IOException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class DiaryServlet
+ * Servlet implementation class Diary_create
  */
-@WebServlet("/Diary_list")
-public class DiaryServlet extends HttpServlet {
+@WebServlet("/create")
+public class Diary_create extends DiaryServlet {
 	private static final long serialVersionUID = 1L;
 
 	@Override
@@ -24,7 +23,7 @@ public class DiaryServlet extends HttpServlet {
 //		req.removeAttribute("content"); // 既存のcontentを消去
 //		req.setAttribute("content", content);
 
-		req.getRequestDispatcher("WEB-INF/jsp/Diary/Diary_list.jsp").forward(req, resp);
+		req.getRequestDispatcher("WEB-INF/jsp/Diary/Diary_create.jsp").forward(req, resp);
 	}
 	
 	@Override

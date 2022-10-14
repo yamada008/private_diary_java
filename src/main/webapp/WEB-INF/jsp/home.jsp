@@ -1,8 +1,7 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-    <jsp:useBean id="user" class="user.UserBean" scope="session" />
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<jsp:useBean id="user" class="user.UserBean" scope="session" />
 <!DOCTYPE html>
 <html lang="ja">
     <head>
@@ -18,8 +17,8 @@
         <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles2.css" rel="stylesheet" />
-        <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+        <link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/css/styles.css"/>
+        <link rel="stylesheet" type="text/css" href="css/mystyle.css"/>
         
     </head>
     <body>
@@ -35,7 +34,7 @@
 		<c:when test="${ user.isAuth() }">
 			<p>ようこそ!、${ user.getUserId() }さん</p>
 			<li class="nav-item"><a class="nav-link" href="/private_diary_java/user?logout=true">Log Out</a></li>
-			<li class="nav-item"><a class="nav-link" href="/private_diary_java/diary">Private Diary</a></li>
+			<li class="nav-item"><a class="nav-link" href="/private_diary_java/Diary_list">Private Diary</a></li>
 		</c:when>
 		<c:otherwise>
 			<li class="nav-item"><a class="nav-link" href="/private_diary_java/user?login=true">Log In・Sign Up</a></li>
