@@ -24,7 +24,7 @@ public class DiaryServlet extends HttpServlet {
 //		req.removeAttribute("content"); // 既存のcontentを消去
 //		req.setAttribute("content", content);
 
-		req.getRequestDispatcher("WEB-INF/jsp/Diary/Diary_list.jsp").forward(req, resp);
+		req.getRequestDispatcher("WEB-INF/jsp/Diary/diary_list.jsp").forward(req, resp);
 	}
 	
 	@Override

@@ -23,7 +23,7 @@ public class Diary_create extends DiaryServlet {
 //		req.removeAttribute("content"); // 既存のcontentを消去
 //		req.setAttribute("content", content);
 
-		req.getRequestDispatcher("WEB-INF/jsp/Diary/Diary_create.jsp").forward(req, resp);
+		req.getRequestDispatcher("WEB-INF/jsp/Diary/diary_create.jsp").forward(req, resp);
 	}
 	
 	@Override
