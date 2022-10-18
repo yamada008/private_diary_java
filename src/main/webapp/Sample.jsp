@@ -4,9 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Sample</title>
 </head>
 <body>
-
+<%
+String msg = "こんにちは";
+out.print(msg);
+%>
 </body>
 </html>
