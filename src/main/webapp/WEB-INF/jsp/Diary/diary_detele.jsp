@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+     <%@ taglib prefix="module" tagdir="/WEB-INF/tags" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +11,7 @@
 		
 		<div class="container my-div-style">
     <div class="row">
-        <form method="POST" action="/delete">
+        <form method="post" action="/delete">
             <input type="hidden" name="csrfmiddlewaretoken" value="ffzMEPQGDQ0RlZ6bRzbbLeh09GiaNwKzitKya1eOv7kunmxuTrHfSnQeUxqumGSj">
             <input type="hidden" name="id" value="XX">
             

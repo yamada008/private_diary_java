@@ -7,11 +7,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class DiaryServlet
  */
-@WebServlet("/diary")
+@WebServlet("/diary_list")
 public class DiaryServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -29,7 +30,14 @@ public class DiaryServlet extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO 自動生成されたメソッド・スタブ
-		super.doPost(req, resp);
+		req.setCharacterEncoding("UTF-8");
+		resp.setContentType("text/html;charset=UTF-8");
+
+		HttpSession session = req.getSession();
+		DiaryBean diary = (DiaryBean) session.getAttribute("diary");
+		
+		req.getParameter("create"); 
+			
+		
 	}
 }

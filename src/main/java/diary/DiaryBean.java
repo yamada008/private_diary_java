@@ -4,10 +4,10 @@ import java.io.Serializable;
 import java.sql.Date;
 
 public class DiaryBean implements Serializable {
-	private String userId = null;
+	private String userId = null;   //ユーザー
 	private Date date = null;
-	private String title = null;
-	private String content = null;
+	private String title = null;    //タイトル
+	private String content = null;  //本文
 	
 	public DiaryBean() {}
 	public DiaryBean(String userId, Date date, String title, String content) {

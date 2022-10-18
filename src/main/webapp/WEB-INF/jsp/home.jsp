@@ -34,7 +34,7 @@
 		<c:when test="${ user.isAuth() }">
 			<p>ようこそ!、${ user.getUserId() }さん</p>
 			<li class="nav-item"><a class="nav-link" href="/private_diary_java/user?logout=true">Log Out</a></li>
-			<li class="nav-item"><a class="nav-link" href="/private_diary_java/diary">Private Diary</a></li>
+			<li class="nav-item"><a class="nav-link" href="/private_diary_java/diary_list">Private Diary</a></li>
 		</c:when>
 		<c:otherwise>
 			<li class="nav-item"><a class="nav-link" href="/private_diary_java/user?login=true">Log In・Sign Up</a></li>

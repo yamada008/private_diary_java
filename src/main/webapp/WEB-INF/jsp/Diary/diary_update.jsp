@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+     <%@ taglib prefix="module" tagdir="/WEB-INF/tags" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,12 +20,10 @@
                 
 <tr><th><label for="id_content">本文:</label></th><td><textarea name="content" cols="40" rows="10" id="id_content"><%-- データベース --%>
 AWS</textarea></td></tr>
-<tr><th><label for="id_photo1">写真01:</label></th><td><input type="file" name="photo1" accept="image/*" id="id_photo1"></td></tr> <%-- データベース --%>
-<tr><th><label for="id_photo2">写真02:</label></th><td><input type="file" name="photo2" accept="image/*" id="id_photo2"></td></tr> <%-- データベース --%>
-<tr><th><label for="id_photo3">写真03:</label></th><td><input type="file" name="photo3" accept="image/*" id="id_photo3"></td></tr> <%-- データベース --%>
+
             </table>
             <button class="btn btn-primary" type="submit">更新</button>
-            <a class="btn btn-secondary ml-2" href="/diary-detail/9/">キャンセル</a>
+            <a class="btn btn-secondary ml-2" href="/diary">キャンセル</a>
         </form>
     </div>
 </div>

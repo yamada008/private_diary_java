@@ -8,7 +8,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Bootstrap Sample</title>
-	<link rel="stylesheet" href="css/styles.css">
+	<link href="css/styles.css" rel="stylesheet" />
 </head>
 <body>
 <div class="container px-4 px-lg-5 my-div-style">
@@ -38,6 +38,6 @@
 		
 		</div>
 	</div>
-		
+			<jsp:include page="/WEB-INF/jsp/index.jsp"/>
 	</body>
 </html>
