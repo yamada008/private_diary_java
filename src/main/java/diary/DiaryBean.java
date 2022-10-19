@@ -1,16 +1,15 @@
 package diary;
 
 import java.io.Serializable;
-import java.sql.Date;
 
 public class DiaryBean implements Serializable {
 	private String userId = null;   //ユーザー
-	private Date date = null;
+	private String date = null;
 	private String title = null;    //タイトル
 	private String content = null;  //本文
 	
 	public DiaryBean() {}
-	public DiaryBean(String userId, Date date, String title, String content) {
+	public DiaryBean(String userId, String date, String title, String content) {
 		this.setUserId(userId);
 		this.setDate(date);
 		this.setTitle(title);
@@ -19,8 +18,8 @@ public class DiaryBean implements Serializable {
 	
 	public void setUserId(String id) { this.userId = id; }
 	public String getUserId() { return this.userId; }
-	public void setDate(Date date) { this.date = date; }
-	public Date getDate() { return this.date; }
+	public void setDate(String date) { this.date = date; }
+	public String getDate() { return this.date; }
 	public void setTitle(String title) { this.title = title; }
 	public String getTitle() { return this.title; }
 	public void setContent(String content) { this.content = content; }
